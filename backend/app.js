@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const express = require("express");
 const cors = require("cors");
 
@@ -12,6 +14,6 @@ const authRoutes = require("./routes/authRoutes");
 
 app.use("/api",authRoutes);
 
-app.listen(3000,()=>{
+app.listen(process.env.PORT,()=>{
     console.log("Server running");
 });

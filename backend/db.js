@@ -1,3 +1,3 @@
 const mongoose = require("mongoose");
-
-mongoose.connect("mongodb://127.0.0.1:27017/auth-project").then(()=>console.log("DB connected")).catch((err)=>console.log(err));
+console.log(process.env.MONGO_URL);
+mongoose.connect(process.env.MONGO_URL).then(()=>console.log("DB connected")).catch((err)=>console.log(err));
