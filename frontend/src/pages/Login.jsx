@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
+import API_URL from '../api/api';
 
 function Login(){
     const [formData,setFormData] = useState({
@@ -22,7 +23,7 @@ function Login(){
                 alert("All Fields Required");
                 return;
             }
-            const res = await axios.post("http://localhost:3000/api/login",formData);
+            const res = await axios.post(API_URL+"/login",formData);
             
             localStorage.setItem(
                 "token",
