@@ -54,7 +54,7 @@ function Login(){
                 <input type="password" name="password" placeholder="Enter Password" onChange={handleChange} />
                 <br /><br />
                 <button type="submit">
-                    Login123
+                    Login22
                 </button>
             </form>
 
