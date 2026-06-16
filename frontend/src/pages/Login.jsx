@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import API_URL from '../api/api';
 
 function Login(){
@@ -46,6 +46,7 @@ function Login(){
     },[]);
     return(
         <div>
+            
             <h1>Login</h1>
             <form onSubmit={handleSubmit}>
                 <input type="email" name="email" placeholder="Enter Email" onChange={handleChange}/>
@@ -56,6 +57,13 @@ function Login(){
                     Login
                 </button>
             </form>
+
+            <p>
+                Don't have an account?{" "}
+                <Link to="/register">
+                    Register Here
+                </Link>
+            </p>
         </div>
     )
 }
