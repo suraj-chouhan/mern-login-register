@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from 'axios'; 
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import API_URL from "../api/api";
 
 function Register(){
     const [ formData, setFormData ] = useState({
@@ -23,7 +24,7 @@ function Register(){
                 alert("All fields required");
                 return;
             } 
-            const res = await axios.post("http://localhost:3000/api/register",formData)
+            const res = await axios.post(API_URL+"/register",formData)
             alert("Register successfully");
             setFormData({name:"",email:"",password:""});
             navigate("/login");
@@ -49,6 +50,12 @@ function Register(){
                 <br /><br />
                 <button type="submit">Register</button>
             </form>
+            <p>
+                if already have account
+                <Link to="/">
+                    Login
+                </Link>
+            </p>
         </div>
     )
 }

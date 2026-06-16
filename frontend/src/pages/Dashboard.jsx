@@ -1,6 +1,7 @@
 import React,{use, useEffect,useState} from "react";
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
+import API_URL from "../api/api";
 
 function Dashboard(){
     const [data, setData] = useState("");
@@ -8,7 +9,7 @@ function Dashboard(){
     const fetchDashboard = async()=>{
         try{
             const token = localStorage.getItem("token");
-            const res = await axios.get("http://localhost:3000/api/dashboard",
+            const res = await axios.get(API_URL+"/dashboard",
                 {
                     headers:{
                         Authorization:token
