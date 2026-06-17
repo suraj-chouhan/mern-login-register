@@ -29,19 +29,89 @@ function Dashboard(){
         localStorage.removeItem("token");
         navgate("/");
     }
-    return(
-        <div>
-            <div style={{display:"flex"}}>
-                <div style={{width:"61%",textAlign:"end"}}>
-                    <h1>Dashboard</h1>
-                </div>
-                <div style={{width:"39%",textAlign:"end"}}>
-                    <button onClick={handleLogout}>Logout</button>
-                </div>
-            </div>
-            <div><h2>{data}</h2></div>
-        </div>
-    )
+    return (
+<div
+style={{
+    minHeight:"100vh",
+    background:"#f5f5f5",
+    padding:"20px"
+}}
+>
+
+    <div
+    style={{
+        display:"flex",
+        justifyContent:"space-between",
+        alignItems:"center",
+        background:"#fff",
+        padding:"15px 25px",
+        borderRadius:"10px",
+        boxShadow:"0 2px 10px rgba(0,0,0,0.1)"
+    }}
+    >
+        <h2>ERP Dashboard</h2>
+
+        <button
+            onClick={handleLogout}
+            style={{
+                background:"red",
+                color:"#fff",
+                border:"none",
+                padding:"10px 20px",
+                borderRadius:"5px",
+                cursor:"pointer"
+            }}
+        >
+            Logout
+        </button>
+    </div>
+
+    <div
+    style={{
+        maxWidth:"500px",
+        margin:"30px auto",
+        background:"#fff",
+        padding:"30px",
+        borderRadius:"10px",
+        textAlign:"center",
+        boxShadow:"0 2px 10px rgba(0,0,0,0.1)"
+    }}
+    >
+
+        <img
+            src={
+                profile ||
+                "https://via.placeholder.com/150"
+            }
+            alt="profile"
+            style={{
+                width:"150px",
+                height:"150px",
+                borderRadius:"50%",
+                objectFit:"cover"
+            }}
+        />
+
+        <br/><br/>
+
+        <input
+            type="file"
+            accept="image/*"
+            onChange={handleImageChange}
+        />
+
+        <h2>{user.name}</h2>
+
+        <p>{user.email}</p>
+
+        <hr />
+
+        <h3>{data}</h3>
+
+    </div>
+
+</div>
+);
 }
 
 export default Dashboard;
