@@ -41,7 +41,7 @@ function Register(){
     }
     return(
         <div>
-            <h1>Register123</h1>
+            <h1>Register1234</h1>
             <form onSubmit={handleSubmit}>
                 <input type="text" value={formData.name}  name="name" placeholder="Enter Name" onChange={handleChange} />
                 <br /><br />
