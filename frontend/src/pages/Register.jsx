@@ -24,6 +24,7 @@ function Register(){
                 alert("All fields required");
                 return;
             } 
+            console.log(API_URL);
             const res = await axios.post(API_URL+"/register",formData)
             alert("Register successfully");
             setFormData({name:"",email:"",password:""});
