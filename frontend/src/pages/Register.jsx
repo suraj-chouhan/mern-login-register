@@ -24,8 +24,7 @@ function Register(){
                 alert("All fields required");
                 return;
             } 
-            console.log(API_URL);
-            const res = await axios.post(API_URL+"/register",formData)
+            const res = await axios.post("/register",formData)
             alert("Register successfully");
             setFormData({name:"",email:"",password:""});
             navigate("/login");
@@ -41,7 +40,7 @@ function Register(){
     }
     return(
         <div>
-            <h1>Register1234</h1>
+            <h1>Register</h1>
             <form onSubmit={handleSubmit}>
                 <input type="text" value={formData.name}  name="name" placeholder="Enter Name" onChange={handleChange} />
                 <br /><br />
