@@ -27,7 +27,7 @@ function Register(){
             const res = await axios.post(API_URL+"/register",formData)
             alert("Register successfully");
             setFormData({name:"",email:"",password:""});
-            navigate("/login");
+            navigate("/");
         }catch(error){
             if(error.response)
             {
