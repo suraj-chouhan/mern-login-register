@@ -18,6 +18,7 @@ function Dashboard(){
                     }
                 }
             );
+            console.log(res.data);
             setData(res.data.message);
             setUser(res.data.user);
         }catch(error){
@@ -58,7 +59,7 @@ style={{
         boxShadow:"0 2px 10px rgba(0,0,0,0.1)"
     }}
     >
-        <h2>ERP Dashboard</h2>
+        <h2>Dashboard</h2>
 
         <button
             onClick={handleLogout}
