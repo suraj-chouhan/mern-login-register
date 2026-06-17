@@ -6,6 +6,7 @@ import API_URL from "../api/api";
 function Dashboard(){
     const [data, setData] = useState("");
     const [profile,setProfile] = useState(null);
+    const [user,setUser] = useState({});
     const navgate = useNavigate();
     const fetchDashboard = async()=>{
         try{
@@ -18,7 +19,7 @@ function Dashboard(){
                 }
             );
             setData(res.data.message);
-            
+            setUser(res.data.user);
         }catch(error){
             console.log(error)
         }
