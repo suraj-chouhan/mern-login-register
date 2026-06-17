@@ -51,7 +51,7 @@ function Register(){
                 <button type="submit">Register</button>
             </form>
             <p>
-                if already have account
+                if already have account  
                 <Link to="/">
                     Login
                 </Link>
