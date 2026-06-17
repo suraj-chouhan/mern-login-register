@@ -5,6 +5,7 @@ import API_URL from "../api/api";
 
 function Dashboard(){
     const [data, setData] = useState("");
+    const [profile,setProfile] = useState(null);
     const navgate = useNavigate();
     const fetchDashboard = async()=>{
         try{
@@ -24,7 +25,14 @@ function Dashboard(){
     }
     useEffect(()=>{
         fetchDashboard();
-    },[])
+    },[]);
+    const handleImageChange = (e)=>{
+        const file = e.target.files[0];
+
+        if(file){
+            setProfile(URL.createObjectURL(file));
+        }
+    }
     const handleLogout = ()=>{
         localStorage.removeItem("token");
         navgate("/");
