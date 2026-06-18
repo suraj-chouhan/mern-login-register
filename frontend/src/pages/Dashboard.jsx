@@ -106,11 +106,11 @@ style={{
 
         <br/><br/>
 
-        <input
+        {/* <input
             type="file"
             accept="image/*"
             onChange={handleImageChange}
-        />
+        /> */}
 
         <h2>{user.name}</h2>
 
