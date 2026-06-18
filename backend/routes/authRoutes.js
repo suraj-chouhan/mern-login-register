@@ -12,7 +12,7 @@ router.get("/dashboard",authMiddleware,
     (req,res)=>{
         res.json({
             message:"Welcome to Dashboard",
-            user:req.user
+            user:res.user
         });
     }
 );
