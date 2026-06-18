@@ -18,7 +18,7 @@ function Dashboard(){
                     }
                 }
             );
-            console.log(res.data);
+            
             setData(res.data.message);
             setUser(res.data.user);
         }catch(error){
@@ -39,6 +39,8 @@ function Dashboard(){
         localStorage.removeItem("token");
         navgate("/");
     }
+
+    
     return (
 <div
 style={{
