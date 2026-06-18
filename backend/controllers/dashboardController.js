@@ -1,9 +1,8 @@
-const { json } = require("express");
 const User = require("../models/User");
 
 const dashboardInfo = async (req,res)=>{
     try{
-        const user = await User.findOne(req.user.id).select("-password");
+        const user = await User.findById(req.user.id).select("-password");
         res.json({message:"Welcome to Dashboard",user});
     }catch(error)
     {
