@@ -90,7 +90,7 @@ style={{
     }}
     >
 
-        <img
+        {/*<img
             src={
                 profile ||
                 "https://via.placeholder.com/150"
@@ -106,7 +106,7 @@ style={{
 
         <br/><br/>
 
-        {/* <input
+         <input
             type="file"
             accept="image/*"
             onChange={handleImageChange}
