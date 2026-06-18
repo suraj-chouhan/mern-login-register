@@ -18,7 +18,7 @@ function Dashboard(){
                     }
                 }
             );
-            
+            console.log(res.data.user);
             setData(res.data.message);
             setUser(res.data.user);
         }catch(error){
