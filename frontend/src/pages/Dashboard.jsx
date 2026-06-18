@@ -18,7 +18,6 @@ function Dashboard(){
                     }
                 }
             );
-            console.log(res);
             setData(res.data.message);
             setUser(res.data.user);
         }catch(error){
